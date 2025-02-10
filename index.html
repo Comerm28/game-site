@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+        <span class="header-image-container">            
+            <img class="header-image" src="garage.png" alt="Garage"></img>
+        </span>
+        <span class="header-content">
+            <div class="college-logos">
+                <img src="Elon-Logo.png" alt="GT Logo">
+                <img src="GT-Logo.png" alt="Elon Logo">    
+            </div>
+            <img src="logo.png" alt="Game Studio Logo">
+            <h3>Because thats where we develop</h3>
+        </span>
+    </header>
+    <nav>
+        <a onclick="showTab('about')">About</a>
+        <a onclick="showTab('game1')">Crown of Agartha</a>
+    </nav>
+    <div class="content">
+        <div id="about" class="tab-content">
+            <h2>About</h2>
+            <p>We are two college students making a game :)</p>
+        </div>
+        <div id="game1" class="tab-content">
+            <h2>Crown of Agartha</h2>
+            <p>
+                A 3D, story, based puzzle game, where Talia attempts to save her tribe and infiltrate Agartha
+            </p>
+            <div class="game-image-container">
+                <img src="old-tut.png" alt="Game!">
+                <p>Example of where the game is at unity-editor wise</p>
+            </div>
+            <div class="code-image-container">
+                <p>The Event Manager that supports game communication and sequencing</p>
+                <img src="code-screenshot.png" alt="Code!">
+            </div>
+        </div>
+    </div>
+    <script>
+        function showTab(tabId) {
+            var tabs = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            document.getElementById(tabId).classList.add('active');
+        }
+        showTab('game1');
+    </script>
+</body>
+</html>
